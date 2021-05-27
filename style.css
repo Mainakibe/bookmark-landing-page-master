@@ -12,8 +12,7 @@
     --VeryDarkBlue: hsl(229, 31%, 21%);
 }
 body{
-    font-family: 'Rubik',sans-serif;
-    /* overflow-x: hidden; */
+    font-family: 'Rubik',sans-serif; 
 }
 h1,h6{
     font-size: 30px;
@@ -41,7 +40,6 @@ p{
     background-color: #fff;
     max-width: 768px;
     min-height: 100vh;   
-    
 }
  
 .links{
@@ -51,10 +49,10 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
     width: 90%;
     height: 20vh;
 }
+
 /* mobile nav */
 .mobile-nav{
     background-color: var(--VeryDarkBlue);
@@ -88,9 +86,8 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-   
     width: 90%;
-    padding: px 20px;
+    padding: 0 0px;
     margin-bottom: 100px;   
 }
 .close{
@@ -143,9 +140,9 @@ main{
     background: var(--SoftBlue);
     border-bottom-left-radius: 100px;
     height: 40vh;
-    width: 50%;
+    width: 66.1%;
     position: relative;
-    left: 11.7rem;
+    left: 7.9rem;
 }
 .showcase-img img{
     position: absolute;
@@ -218,6 +215,7 @@ main{
     font-size: 25px;
     font-weight: 500;
 }
+
 /* tabs btns */
  .tabs{
     display: flex;
@@ -248,11 +246,12 @@ main{
     color: var(--SoftRed);
     cursor: pointer;
 }
-.box-btn:nth-child(1){
-    border-bottom: 2px solid var(--SoftRed);
-
+.box-btn:active{
+    border-bottom:2px solid var(--SoftRed);
 }
-
+.box-btn-active{
+    border-bottom: 2px solid var(--SoftRed);
+}
 .tabs-content{
     display: flex;
     align-items: center;
@@ -260,12 +259,13 @@ main{
     flex-direction: column;
     width: 100%;
     margin-top: 200px;
-    /* transform: translateX(100%);
-    position: absolute; */
-    
+    position: absolute;
+    right: 0rem;
+    display: none;   
 }
-#tab-1{
-    /* transform: translateX(-600px); */
+
+.tabs-content.active{
+    display: block;
 }
 .tab-left{
     width: 100%;
@@ -279,21 +279,24 @@ main{
 }
 .tab-img{
     position: absolute;
-    top: 77rem;
+    top: -2rem;
     left: 2rem;
     width: 330px;
+    z-index: 1;
 }
 .tab-img2{
     position: absolute;
-    top: 115rem;
-    left:2rem;
+    top: -6rem;
+    left: 2rem;
     width: 330px;
+    z-index: 1;
 }
 .tab-img3{
     position: absolute;
-    top: 155rem;
-    left:2rem;
+    top: -6rem;
+    left: 2rem;
     width: 330px;
+    z-index: 1;
 }
 .tab-right{
     width: 90%;
@@ -326,7 +329,7 @@ main{
     align-items: center;
     justify-content: center;
     width: 100%;
-    margin-top: 50px;
+    margin-top: 750px;
 }
 .extensions-text{
     display: flex;
@@ -431,22 +434,6 @@ span{
     padding: 20px 0;
     width: 100%;
 }
-h5{
-    font-size: 16px;
-    font-weight: 400;
-}
-.accordion-answer{
-    color: var(--GrayishBlue);
-    font-size: 15px;
-    padding: 20px 0;
-}
-.accordion-questions{
-    display: flex;
-    flex-direction: column;
-}
-
-
-
 .accordion-question{
     display: flex;
     align-items: center;
@@ -457,6 +444,17 @@ h5{
     position: absolute;
     right: 1rem;
 }
+h5{
+    font-size: 16px;
+    font-weight: 400;
+}
+.accordion-answer{
+    color: var(--GrayishBlue);
+    font-size: 15px;
+    padding: 20px 0;
+}
+
+
 .accordion-answer{
     display: none;
 }
@@ -609,7 +607,7 @@ small{
     padding: 12px 0;
 }
 .socials svg{
-    margin: 0 10px;
+    margin: 25px 10px;
 }
 #fb:hover{
     fill: var(--SoftRed);
@@ -619,8 +617,10 @@ small{
     
 }
     
+/* desktop view */
 
 @media (min-width:768px){
+    
     .wrapper{
         display: flex;
         flex-direction: column;
@@ -630,6 +630,7 @@ small{
         background-color: #fff;
         max-width: 1440px;
         min-height: 100vh;  
+        
     }
     .mobile-nav{
         display: none;
@@ -711,9 +712,9 @@ small{
         background: var(--SoftBlue);
         border-bottom-left-radius: 100px;
         height: 40vh;
-        width: 73%;
+        width: 70%;
         position: relative;
-        left: 11.7rem;
+        left: 13.1rem;
     }
     .showcase-img img{
         position: absolute;
@@ -804,34 +805,36 @@ small{
         padding: 10px 30px;
         outline: none;
         border-bottom: 1px solid var(--GrayishBlue);
-        
     }
-    .tabs-sections{
-        height: 90vh;
+    .box-btn:active{
+        border-bottom:2px solid var(--SoftRed);
     }
-
+    .box-btn-active{
+        border-bottom: 2px solid var(--SoftRed);
+    }
     .tabs-content{
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
         width: 100%;
+<<<<<<< HEAD
         opacity: 0;
       
+=======
+        display: none;
+>>>>>>> 5a2b90c3da01adf9f05a5c77561f9e290ac74fe1
     }
    
     .tab-left{
         background-color: var(--SoftBlue);
         border-bottom-right-radius: 100px;
         height:45vh;
-        flex-basis: 40%;
-        /* position: relative; */
-       
-        
+        flex-basis: 40%; 
+        width: 35%; 
     }
-    .tabs .tabs-content .active{
-        transform: translateY(0px);
-        opacity: 1;
+    .tabs-content.active{
+       display: flex;
     }
     .tab-img{
         position: absolute;
@@ -839,22 +842,25 @@ small{
         left: 10rem;
         top: -5rem;
     }
-    /* .tab-img2{
+    .tab-img2{
         position: absolute;
-        width: 500px;
-        top: 95rem;
+        top: -9rem;
         left: 10rem;
+        width: 500px;
     }
     .tab-img3{
         position: absolute;
-        width: 500px;
-        top: 128rem;
+        top: -9rem;
         left: 10rem;
-    } */
+        width: 500px;
+        z-index: 1;
+    }
     .tab-right{
-        padding: 0px 100px 0 135px;
+        padding: 0px 100px 0 200px;
         flex-basis: 60%;  
         margin-bottom: 0px;
+        width: 60%;
+        text-align: left;
     }
     .tabs-header{
         font-size: 40px;
@@ -888,6 +894,7 @@ small{
         justify-content: center;
         text-align: center;
         width: 40%;
+        margin-top: -100px;
     }
     .extensions-text h3{
         font-size: 35px;
@@ -1040,3 +1047,338 @@ small{
     }
     
 }
+
+/* iphone 8plus */
+@media only screen 
+    and (device-width : 414px) 
+    and (device-height : 736px) 
+    and (-webkit-device-pixel-ratio : 3) { 
+        .showcase-img-1{
+            background: var(--SoftBlue);
+            border-bottom-left-radius: 100px;
+            height: 40vh;
+            width: 0%;
+            position: relative;
+            left: 8rem;
+        }
+        .showcase-img img{
+            width: 330px;
+        }
+        .mobile-nav{
+            background-color: var(--VeryDarkBlue);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 110vh;
+            width: 100%;
+            transform: translateY(-100%);
+            transition: transform 0.2s;
+            z-index: 1;
+            opacity: .9;
+        }
+        .showMenu{
+            transform: translateY(0%);
+        }
+        .top{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            padding: 0 0px;
+            margin-bottom: 100px;
+            margin-top: 120px;   
+        }
+        .close{
+            cursor: pointer;
+        }
+        .link-items{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: -50px;
+            width: 90%;
+        }
+        .link-items a{
+            border-top: 1px solid var(--GrayishBlue);
+            color: hsl(0, 0%, 100%);
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 30px;
+            font-weight: 400;
+            padding: 15px 0;
+            width: 90%;
+        }
+        .lower{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 150px;
+        }
+        .lower img{
+            padding: 0 10px;
+        }
+    }
+
+    /* iphone x */
+    @media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (-webkit-device-pixel-ratio: 3) { 
+            .showcase-img-1{
+                background: var(--SoftBlue);
+                border-bottom-left-radius: 100px;
+                height: 25vh;
+                width: 80.7%;
+                position: relative;
+                left: 5rem;
+            }
+            .mobile-nav{
+                background-color: var(--VeryDarkBlue);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                top: -3.2rem;
+                left: 0rem;
+                height: 92vh;
+                width: 100%;
+                transform: translateY(-100%);
+                transition: transform 0.2s;
+                z-index: 1;
+                opacity: .9;
+            }
+            .showMenu{
+                transform: translateY(0%);
+            }
+            .top{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 90%;
+                padding: 0 0px;
+                margin-bottom: 100px;   
+            }
+            .close{
+                cursor: pointer;
+            }
+            .link-items{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin-top: -50px;
+                width: 90%;
+            }
+            .link-items a{
+                border-top: 1px solid var(--GrayishBlue);
+                color: hsl(0, 0%, 100%);
+                text-align: center;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-size: 30px;
+                font-weight: 400;
+                padding: 15px 0;
+                width: 90%;
+            }
+            .lower{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 150px;
+            }
+            .lower img{
+                padding: 0 10px;
+            }
+            .tab-left-1{
+                background-color: var(--SoftBlue);
+                border-bottom-right-radius: 100px;
+                height:28vh;
+                width: 60%;
+                position: relative;
+            }
+            footer{
+                height: 80vh;
+            }
+            .footer-top{
+                height: 50vh;
+            }
+    }
+    /* iphone xs max */
+    @media only screen and (min-device-width : 414px) and (max-device-height : 896px) and (-webkit-device-pixel-ratio : 3) {
+        .showcase-img-1{
+            background: var(--SoftBlue);
+            border-bottom-left-radius: 100px;
+            height: 25vh;
+            width: 80.7%;
+            position: relative;
+            left: 5rem;
+        }
+        .mobile-nav{
+            background-color: var(--VeryDarkBlue);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: -5rem;
+            left: 0rem;
+            height: 92vh;
+            width: 100%;
+            transform: translateY(-100%);
+            transition: transform 0.2s;
+            z-index: 1;
+            opacity: .9;
+        }
+        .showMenu{
+            transform: translateY(0%);
+        }
+        .top{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            padding: 0 0px;
+            margin-bottom: 100px;   
+        }
+        .close{
+            cursor: pointer;
+        }
+        .link-items{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: -50px;
+            width: 90%;
+        }
+        .link-items a{
+            border-top: 1px solid var(--GrayishBlue);
+            color: hsl(0, 0%, 100%);
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 30px;
+            font-weight: 400;
+            padding: 15px 0;
+            width: 90%;
+        }
+        .lower{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 150px;
+        }
+        .lower img{
+            padding: 0 10px;
+        }
+        .tab-left-1{
+            background-color: var(--SoftBlue);
+            border-bottom-right-radius: 100px;
+            height:28vh;
+            width: 60%;
+            position: relative;
+        }
+        footer{
+            height: 80vh;
+        }
+        .footer-top{
+            height: 40vh;
+        }
+        
+     }
+     /* iphone se */
+     @media screen and (device-aspect-ratio: 40/71) {
+        .showcase-img-1{
+            background: var(--SoftBlue);
+            border-bottom-left-radius: 100px;
+            height: 35vh;
+            width: 80.7%;
+            position: relative;
+            left: 3.85rem;
+        }
+         .showcase-img img{
+             top: 5rem;
+             width: 320px;
+         }
+         .mobile-nav{
+            background-color: var(--VeryDarkBlue);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 0rem;
+            left: 0rem;
+            height: 100vh;
+            width: 100%;
+            transform: translateY(-110%);
+            transition: transform 0.2s;
+            z-index: 1;
+            opacity: .9;
+        }
+        .showMenu{
+            transform: translateY(0%);
+        }
+        .top{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            padding: 0px 0px;
+            margin-bottom: 100px;   
+            margin-top: 33px;
+        }
+        .close{
+            cursor: pointer;
+        }
+        .link-items{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: -50px;
+            width: 90%;
+        }
+        .link-items a{
+            border-top: 1px solid var(--GrayishBlue);
+            color: hsl(0, 0%, 100%);
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 30px;
+            font-weight: 400;
+            padding: 15px 0;
+            width: 90%;
+        }
+        .lower{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 150px;
+        }
+        .lower img{
+            padding: 0 10px;
+        }
+         .tab-img{
+             width: 280px;
+         }
+         .tab-img2{
+             width: 280px;
+         }
+         .tab-img3{
+             width: 280px;
+         }
+         footer{
+             height: 120vh;
+         }
+         .footer-top{
+             height: 70vh;
+         }
+         .footer-lower{
+             height: 50vh;
+         }
+     }

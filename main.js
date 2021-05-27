@@ -1,38 +1,27 @@
 // tabs
 
-// const tab1 = document.getElementById('tab-1')
-// const tab2 = document.getElementById('tab-2')
-// const tab3 =document.getElementById('tab-3')
-// const btn1 = document.getElementById('btn-1')
-// const btn2 = document.getElementById('btn-2')
-// const btn3 = document.getElementById('btn-3')
+function setupTabs(){
+    document.querySelectorAll('.box-btn').forEach(button=>{
+        button.addEventListener('click',()=>{
+            const titlesBox = button.parentElement;
+            const tabs = titlesBox.parentElement
+            const tabNumber=button.dataset.forTab
+            const tabToActivate = tabs.querySelector(`.tabs-content[data-tab="${tabNumber}"]`)
 
-
-// btn1.addEventListener('click',()=>{
-//     tab1.style.transform='translateX(-600px)'
-//     tab2.style.transform='translateX(100%)'
-//     tab3.style.transform='translateX(100%)'
-//     btn1.style.borderBottom='2px solid hsl(0, 94%, 66%)'
-//     btn2.style.borderBottom='2px solid hsl(229, 8%, 60%)'
-//     btn3.style.borderBottom='2px solid hsl(229, 8%, 60%)'
-// })
-// btn2.addEventListener('click',()=>{
-//     tab1.style.transform='translateX(100%)'
-//     tab2.style.transform='translateX(-600px)'
-//     tab3.style.transform='translateX(100%)'
-//     btn2.style.borderBottom='2px solid hsl(0, 94%, 66%)'
-//     btn1.style.borderBottom='2px solid hsl(229, 8%, 60%)'
-//     btn3.style.borderBottom='2px solid hsl(229, 8%, 60%)'
-// })
-// btn3.addEventListener('click',()=>{
-//     tab1.style.transform='translateX(100%)'
-//     tab2.style.transform='translateX(100%)'
-//     tab3.style.transform='translateX(-600px)'
-//     btn3.style.borderBottom='2px solid hsl(0, 94%, 66%)'
-//     btn2.style.borderBottom='2px solid hsl(229, 8%, 60%)'
-//     btn1.style.borderBottom='2px solid hsl(229, 8%, 60%)'
-// })
-
+            titlesBox.querySelectorAll('.box-btn').forEach(button=>{
+                button.classList.remove('box-btn-active')
+            })
+            tabs.querySelectorAll('.tabs-content').forEach(tab=>{
+                tab.classList.remove('active')
+            })
+            button.classList.add('box-btn-active')
+            tabToActivate.classList.add('active')
+        })
+    })
+}
+document.addEventListener('DOMContentLoaded',()=>{
+    setupTabs()
+})
 
 
 // accordion
