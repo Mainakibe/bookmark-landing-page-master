@@ -617,8 +617,10 @@ small{
     
 }
     
+/* desktop view */
 
 @media (min-width:768px){
+    
     .wrapper{
         display: flex;
         flex-direction: column;
@@ -628,6 +630,7 @@ small{
         background-color: #fff;
         max-width: 1440px;
         min-height: 100vh;  
+        
     }
     .mobile-nav{
         display: none;
@@ -709,9 +712,9 @@ small{
         background: var(--SoftBlue);
         border-bottom-left-radius: 100px;
         height: 40vh;
-        width: 73%;
+        width: 70%;
         position: relative;
-        left: 11.7rem;
+        left: 13.1rem;
     }
     .showcase-img img{
         position: absolute;
@@ -1040,7 +1043,7 @@ small{
     
 }
 
-/* iphone 8 */
+/* iphone 8plus */
 @media only screen 
     and (device-width : 414px) 
     and (device-height : 736px) 
@@ -1048,10 +1051,72 @@ small{
         .showcase-img-1{
             background: var(--SoftBlue);
             border-bottom-left-radius: 100px;
-            height: 35vh;
-            width: 70%;
+            height: 40vh;
+            width: 0%;
             position: relative;
             left: 8rem;
+        }
+        .showcase-img img{
+            width: 330px;
+        }
+        .mobile-nav{
+            background-color: var(--VeryDarkBlue);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 110vh;
+            width: 100%;
+            transform: translateY(-100%);
+            transition: transform 0.2s;
+            z-index: 1;
+            opacity: .9;
+        }
+        .showMenu{
+            transform: translateY(0%);
+        }
+        .top{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            padding: 0 0px;
+            margin-bottom: 100px;
+            margin-top: 120px;   
+        }
+        .close{
+            cursor: pointer;
+        }
+        .link-items{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: -50px;
+            width: 90%;
+        }
+        .link-items a{
+            border-top: 1px solid var(--GrayishBlue);
+            color: hsl(0, 0%, 100%);
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 30px;
+            font-weight: 400;
+            padding: 15px 0;
+            width: 90%;
+        }
+        .lower{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 150px;
+        }
+        .lower img{
+            padding: 0 10px;
         }
     }
 
