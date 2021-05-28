@@ -712,9 +712,8 @@ small{
         background: var(--SoftBlue);
         border-bottom-left-radius: 100px;
         height: 40vh;
-        width: 70%;
+        width: 81.9%;
         position: relative;
-        left: 13.1rem;
     }
     .showcase-img img{
         position: absolute;
