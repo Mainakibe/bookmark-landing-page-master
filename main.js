@@ -9,10 +9,10 @@ function setupTabs(){
             const tabToActivate = tabs.querySelector(`.tabs-content[data-tab="${tabNumber}"]`)
 
             titlesBox.querySelectorAll('.box-btn').forEach(button=>{
-                button.classList.remove('box-btn-active')
+                button.classList.remove('box-btn-active');
             })
             tabs.querySelectorAll('.tabs-content').forEach(tab=>{
-                tab.classList.remove('active')
+                tab.classList.remove('active');
             })
             button.classList.add('box-btn-active')
             tabToActivate.classList.add('active')

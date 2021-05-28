@@ -818,12 +818,7 @@ small{
         align-items: center;
         justify-content: center;
         width: 100%;
-<<<<<<< HEAD
-        opacity: 0;
-      
-=======
         display: none;
->>>>>>> 5a2b90c3da01adf9f05a5c77561f9e290ac74fe1
     }
    
     .tab-left{
