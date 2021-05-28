@@ -4,7 +4,7 @@ function setupTabs(){
     document.querySelectorAll('.box-btn').forEach(button=>{
         button.addEventListener('click',()=>{
             const titlesBox = button.parentElement;
-            const tabs = titlesBox.parentElement
+            const tabs = titlesBox.parentElement;
             const tabNumber=button.dataset.forTab
             const tabToActivate = tabs.querySelector(`.tabs-content[data-tab="${tabNumber}"]`)
 
